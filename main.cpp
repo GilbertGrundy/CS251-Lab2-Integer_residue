@@ -89,13 +89,18 @@ void find_residue(int &count, long long &a, long long k, long long n, long long 
 	if(k < 1) return; //leaves if can't be divided anymore.
 
 	//display step:
-	cout << a << "^(2^" << count << ") MOD " << n << " = " << residue << endl;
+	cout << a << "^(2^" << count << ") MOD " << n << " = " << residue;
 
 	//if k%2 = 1, then a^(2^k) mod n is relevant
-	if(k % 2) total = (total * (residue%n));
-
+	if(k % 2) 
+	{
+		total = (total * (residue%n));
+		cout << "*";
+	}
 	//get the value of a^(2^(k+1)) mod n
 	residue = next_res(residue, n);
+
+	cout << endl;
 
 	//halve the exponent, count the exponent, call the function recursively
 	find_residue(++count, a, (k/2), n, residue, total);
