@@ -47,3 +47,15 @@ Would you like to run the program again? y/n: n
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
+So:
+
+17^13 MOD 123 = {(17^1 MOD 123)*(17^4 MOD 123)*(17^8 MOD 123)} MOD 123
+              = {17*4*16} MOD 123
+              = 1088 MOD 123
+              = 104
+              
+2nd Example is a little less interesting:
+
+22^16 MOD 88 = 22^16 MOD 88
+             = 0 MOD 88
+             = 0
